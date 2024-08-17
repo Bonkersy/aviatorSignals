@@ -310,6 +310,7 @@
 			let currency = null;
 			let sum = 0;
 			let startSum = 0;
+			let signalLoading = false;
 
 			let loading = false;
 
@@ -317,6 +318,7 @@
 			{
 				if(cur == currency) return;
 				if(loading == true) return;
+				if(signalLoading == true) return;
 
 				loading = true;
 
@@ -364,8 +366,14 @@
 				loading = false;
 			}
 
+			
+
 			async function getSignal(s)
 			{
+				if(signalLoading == true) return ;
+
+				signalLoading = true;
+
 				$(".bet-loading").css("opacity", "1.0");
 
 				await sleep(random(500, 1500));
@@ -386,6 +394,8 @@
 
 				$("#bet-money").text(sum+currencySumbol);
 				$("#bet-rate").text(rate.toLocaleString("en-US", { maximumFractionDigits: 2, minimumFractionDigits: 2 })+"x");
+
+				signalLoading = false;
 			}
 
 		</script>
