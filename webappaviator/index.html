@@ -62,21 +62,18 @@
 			}
 
 				.header {
-					font-size: 30px;
-					font-weight: bold;
-					font-style: italic;
-
-					margin: 0 auto;
-					max-width: 200px;
-
-					background-image: url(logo.png);
-					background-position: top right;
-					background-repeat: no-repeat;
-					background-size: 80px;
-
-					padding-top: 10px;
-
-					text-shadow: 0px 0px 10px white;
+				    font-size: 38px;
+				    font-weight: bold;
+				    font-style: italic;
+				    margin: 0 auto;
+				    max-width: 230px;
+				    background-image: url(logo.png);
+				    background-position: top right;
+				    background-repeat: no-repeat;
+				    background-size: 80px;
+				    padding-top: 10px;
+				    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+				    filter: drop-shadow(0px 0px 11px #f95c5c);
 				}
 					.header-left {
 						text-align: left;
@@ -162,9 +159,9 @@
 
 					.bet-side-text {
 						margin-top: 10px;
-						font-size: 25px;
-						font-weight: bold;
-						text-shadow: 0px 0px 15px white;
+					    font-size: 27px;
+					    font-weight: bold;
+					    text-shadow: 0px 0px 14px #fb73f1;
 					}
 
 					.bet-loading {
@@ -215,26 +212,31 @@
 						}
 
 						.button-signal-center {
-							padding: 15px 0px;
-							background-position: left center;
-							background-repeat: no-repeat;
-							background-size: 30px;
-							display: inline-block;
+							padding: 10px 0px;
+						    background-position: left center;
+						    background-repeat: no-repeat;
+						    background-size: 26px;
+						    display: inline-block;
+						    padding-left: 36px;
+						    margin-top: 2px;
+						}
 
-							padding-left: 43px;
-
+						.button-desc {
+						    font-size: 12px;
+						    font-weight: 100;
+						    margin-bottom: 10px;
 						}
 
 
 			.hidden {
 				pointer-events: none;
 				opacity: 0;
-				transform: scale(0.8);
+				transform: translateY(-40px) scale(0.8);
 				transition: 0.8s;
 			}
 				.hidden-show {
 					opacity: 1.0 !important;
-					transform: scale(1.0000001) !important;
+					transform: translateY(0px) scale(1.0000001) !important;
 					pointer-events: auto !important;
 				}
 
@@ -411,7 +413,7 @@
 				<div class="header-right">Calculator</div>
 			</div>
 
-			<div class="info">Win-Win Strategy Calculator for the Aviator Game.<br><br>Note: Your balance must be at least $20 (2,000₹) to play with 99% guarantee. Works only for 1win casino.</div>
+			<div class="info">99% Win Strategy Calculator for the Aviator Game.<br><br>Note: Your balance must be at least $20 (2,000₹) to play with 99% guarantee. Works only for 1win casino.</div>
 
 			<div class="currency-box">
 				<div class="currency-box-header">Select your currency</div>
@@ -445,11 +447,11 @@
 
 				<div class="arrow-down"></div>
 
-				<div class="buttons-header">Tap the button after you have placed your bet and the game is over.<br><br>And after that the bot will give the next signal.</div>
+				<div class="buttons-header">Tap the button after you have placed your bet and the game is over</div>
 
 				<div class="signal-buttons">
-					<div class="button-signal button-red" onclick="getSignal('lost')"><div class="button-signal-center" style="background-image: url(lost.png);">I lost</div></div>
-					<div class="button-signal button-green" onclick="getSignal('won')"><div class="button-signal-center" style="background-image: url(won.png);">I won</div></div>
+					<div class="button-signal button-red" onclick="getSignal('lost')"><div class="button-signal-center" style="background-image: url(lost.png);">I lost</div><div class="button-desc">Tap if you lost current bet</div></div>
+					<div class="button-signal button-green" onclick="getSignal('won')"><div class="button-signal-center" style="background-image: url(won.png);">I won</div><div class="button-desc">Tap if you won current bet</div></div>
 				</div>
 			</div>
 		</div>
